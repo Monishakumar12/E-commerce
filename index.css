@@ -1,8 +1,23 @@
-img{
+.logo{
     width: 70px;
     height: 60px;
 }
 a{
     text-decoration: none;
     color: black;
+}
+ul {
+    list-style-type: none;
+    line-height: 2.5rem;
+  }
+.fa-icons{
+    font-size: 2.5rem;
+    padding-left: 2.5rem;
+    padding-right: 1rem;
+}
+.welcome{
+    border: 2px solid orange;
+    padding: 2rem 0;
+    background-image: url("../E-commerce\ Assignment/baneer.jpg");
+    color: orange;
 }
