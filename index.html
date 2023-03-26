@@ -1,51 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
     <head>
         <title>E-commerce</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1,
-            shrink-to-fit=no">
-        <link rel="stylesheet" href="index.css">
-        <!-- Bootstrap CSS v5.2.1 -->
-        <!-- Option 1: Include in HTML -->
-        <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1,
+            shrink-to-fit=no"
+            />
+        <link rel="stylesheet" href="index.css" />
+        
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+            />
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
             rel="stylesheet"
             integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-            crossorigin="anonymous">
-
+            crossorigin="anonymous"
+            />
     </head>
 
     <body>
-        <!-- dummy start -->
-
-        <nav class="navbar navbar-expand-lg navbar-light "
-            style="background-color: #3d909b;">
+        <nav
+            class="navbar navbar-expand-lg navbar-light"
+            style="background-color: #3d909b">
             <div class="container">
-                <a class="navbar-brand" href="#" style="color:orangered">
-                    <img class="logo" src="../E-commerce Assignment/swiggy.png"
-                        alt="no image">
-
+                <a class="navbar-brand" href="index.html" style="color:
+                    orangered">
+                    <img
+                        class="logo"
+                        src="../E-commerce Assignment/swiggy.png"
+                        alt="no image"
+                        />
                 </a>
-                <a class="navbar-brand " href="index.html"
-                    style="color:lightsalmon">Swiggy</a>
-                <button class="navbar-toggler d-lg-none" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
+                <a class="navbar-brand" href="index.html" style="color:
+                    lightsalmon">Foody</a>
+                <button
+                    class="navbar-toggler d-lg-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId"
                     aria-controls="collapsibleNavId"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white mx-4 "
-                                href="#" id="dropdownId"
-                                data-bs-toggle="dropdown" aria-haspopup="true"
+                            <a
+                                class="nav-link dropdown-toggle text-white mx-4"
+                                href="#"
+                                id="dropdownId"
+                                data-bs-toggle="dropdown"
+                                aria-haspopup="true"
                                 aria-expanded="false">Bengaluru,Karnataka,India</a>
                             <div class="dropdown-menu"
                                 aria-labelledby="dropdownId">
@@ -56,250 +66,270 @@
                     </ul>
                     <form class="d-flex my-2 my-lg-0">
                         <div class="my-1 text-white">
-                            <a>
-                                <h6><i class="bi bi-search"></i>
+                            <a href="#" class="text-white text-decoration-none">
+                                <h6>
+                                    <i class="bi bi-search"></i>
                                     <span>Search</span>
                                 </h6>
                             </a>
                         </div>
                         <div class="mx-5 my-1 text-white cart">
-                            <a href="product.html" class="bg-gradient border
-                                pb-2 pt-1 px-3 rounded-1 text-white
-                                text-decoration-none addingCart"
+                            <a
+                                href="cart.html"
+                                class="bg-gradient border pb-2 pt-1 px-3
+                                rounded-1 text-white text-decoration-none
+                                addingCart"
                                 target="_blank">
-                                
                                 <i class="bi bi-bag-check"><span>0</span></i>
                             </a>
                         </div>
-                        <button type="button" class="btn btn-outline-dark my-2
-                            my-sm-0 " data-bs-toggle="modal"
+                        <button
+                            type="button"
+                            class="btn btn-outline-dark my-2 my-sm-0"
+                            data-bs-toggle="modal"
                             data-bs-target="#modalId">
                             Login
                         </button>
                     </form>
 
-
-
-                    <div class="modal fade" id="modalId" tabindex="-1"
-                        data-bs-backdrop="static" data-bs-keyboard="false"
-                        role="dialog" aria-labelledby="modalTitleId"
+                    <div
+                        class="modal fade"
+                        id="modalId"
+                        tabindex="-1"
+                        data-bs-backdrop="static"
+                        data-bs-keyboard="false"
+                        role="dialog"
+                        aria-labelledby="modalTitleId"
                         aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-scrollable
-                            modal-dialog-centered modal-sm" role="document">
+                        <div
+                            class="modal-dialog modal-dialog-scrollable
+                            modal-dialog-centered modal-sm"
+                            role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="modalTitleId">User
                                         Login</h5>
-                                    <button type="button" class="btn-close"
+                                    <button
+                                        type="button"
+                                        class="btn-close"
                                         data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <div class="mb-3">
                                         <label for="" class="form-label">Email</label>
-                                        <input type="email" class="form-control"
-                                            name="" id=""
+                                        <input
+                                            type="email"
+                                            class="form-control"
+                                            name=""
+                                            id=""
                                             aria-describedby="emailHelpId"
-                                            placeholder="abc@mail.com">
-
+                                            placeholder="abc@mail.com"
+                                            />
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="" class="form-label">Password</label>
-                                        <input type="password"
-                                            class="form-control" name="" id=""
-                                            placeholder="">
+                                        <input
+                                            type="password"
+                                            class="form-control"
+                                            name=""
+                                            id=""
+                                            placeholder=""
+                                            />
                                     </div>
                                     <div class="text-lg-center text-primary">
-                                        <p><a>Forget Password?</a> <a>Create
-                                                Account</a></p>
+                                        <p><a href="#" style="text-decoration: none;">Forget Password?</a> 
+                                            <a href="#" style="text-decoration: none;">
+                                                Create Account</a>
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn
-                                        btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button
+                                        type="button"
+                                        class="btn btn-secondary"
+                                        data-bs-dismiss="modal">
+                                        Close
+                                    </button>
                                     <button type="button" class="btn
                                         btn-primary">Save</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </nav>
 
-        <script>
-        const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
-    </script>
-        <main>
-            <div class="container ">
+        <main class="mainbg">
+            <div class="container">
                 <div class="row">
-                    <div class="col-12 d-flex justify-content-center mt-4
-                        mx-auto rounded-3 w-75 welcome">
-                        <h5>Welcoming you with your favourite delicacies, beyond
-                            the boundaries of taste.</h5>
+                    <div
+                        class="col-12 d-flex justify-content-center mt-4 mx-auto
+                        rounded-3 w-75 welcome">
+                        <h5>
+                            Welcoming you with your favourite delicacies, beyond
+                            the
+                            boundaries of taste.
+                        </h5>
                     </div>
                 </div>
             </div>
-           
 
             <div class="container">
                 <div class="row my-5">
-                    <div class="col-12 col-lg-3 col-md-6 col-sm-12 " id="chicken
-                        ">
-                        <div class="card ">
-                            <img class="card-img-top h-50" src="../E-commerce Assignment/briyani ratio.jpg"
-                                id="image_b" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title" id="title_b">Chicken
-                                    Briyani</h5>
-                                <h5 class="card-text" id="price">₹250</h5>
-                                <p id="desc_b">Biryani Rice with chicken sholay
-                                    Boneless
-                                    pieces</p>
-                                <!-- <button class="btn btn-primary add_cart" target="_blank" onclick="addCounting()" id="add_b">ADD</button> -->
-                                <!-- You can dismiss by clicking somewhere -->
-                                <!-- <div class="d-flex mx-1" id="add">
-                                    <button type="button" onclick="Increment()" >+</button>
-                                <h3 id="counting" class="px-3"></h3>
-                                <button type="button" onclick="decrement()" >-</button>
-                            </div> -->
-                                <button type="button" class="btn btn-primary
-                                    add_cart" onclick="addCounting()"
-                                    id="liveToastBtn">ADD</button>
-
-                               
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-3 col-sm-12 col-md-6">
+                    <div class="col-12 col-lg-3 col-md-6 col-sm-12
+                        cart_Product">
                         <div class="card">
-                            <img class="card-img-top h-25" src="../E-commerce Assignment/gulab1.png"
-                                alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Gulab Jamun</h5>
-                                <h5 class="card-text">₹180</h5>
-                                <p>Noodles stir fried in aromatic burnt garlic
-                                    spice</p>
-                                <a href="#" class="btn btn-primary add_cart">ADD</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-3 col-sm-12 col-md-6">
-                        <div class="card">
-                            <img class="card-img-top h-50" src="../E-commerce Assignment/paneer ratio.jpg"
-                                alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Fried Rice</h5>
-                                <h5 class="card-text">₹220</h5>
-                                <p>Served with tomato sauce(no artificial
-                                    colours).</p>
-                                <a href="#" class="btn btn-primary add_cart">ADD</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-3 col-md-6 col-sm-12">
-                        <div class="card">
-                            <img class="card-img-top h-50" src="../E-commerce Assignment/Dragon-paneer.jpg"
-                                alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Paneer Gravey</h5>
-                                <h5 class="card-text">₹200</h5>
-                                <p>A paneer dish cooked in a onion tomato gravy.</p>
-                                <a href="#" class="btn btn-primary add_cart">ADD</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                </div>
-            </div>
-
-
-
-            <div class="container">
-                <div class="row my-5">
-                    <div class="col-12 col-lg-3 col-md-6 col-sm-12">
-                        <div class="card ">
-                            <img class="card-img-top h-50" src="../E-commerce Assignment/Dragon-paneer.jpg"
-                                alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Paneer Gravey</h5>
-                                <h5 class="card-text">₹200</h5>
-                                <p>A paneer dish cooked in a onion tomato gravy.</p>
-                                <a href="#" class="btn btn-primary add_cart">ADD</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-3 col-sm-12 col-md-6">
-                        <div class="card ">
-                            <img class="card-img-top h-25" src="../E-commerce Assignment/gulab1.png"
-                                alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Gulab Jamun</h5>
-                                <h5 class="card-text">₹180</h5>
-                                <p>Noodles stir fried in aromatic burnt garlic
-                                    spice</p>
-                                <a href="#" class="btn btn-primary add_cart">ADD</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-3 col-sm-12 col-md-6">
-                        <div class="card ">
-                            <img class="card-img-top h-50" src="../E-commerce Assignment/paneer ratio.jpg"
-                                alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Fried Rice</h5>
-                                <h5 class="card-text">₹220</h5>
-                                <p>Served with tomato sauce(no artificial
-                                    colours).</p>
-                                <a href="#" class="btn btn-primary">ADD</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-3 col-md-6 col-sm-12 ">
-                        <div class="card">
-                            <img class="card-img-top h-50" src="../E-commerce Assignment/briyani ratio.jpg"
-                                alt="Card image cap">
+                            <img
+                                class="card-img-top h-50"
+                                src="../E-commerce Assignment/briyani ratio.jpg"
+                                id="image_b"
+                                alt="Card image cap"
+                                />
                             <div class="card-body">
                                 <h5 class="card-title">Chicken Briyani</h5>
                                 <h5 class="card-text">₹250</h5>
-                                <p>Biryani Rice with chicken sholay Boneless
-                                    pieces</p>
-                                <a href="#" class="btn btn-primary">ADD</a>
+                                <p id="desc_b">
+                                    Biryani Rice with chicken sholay Boneless
+                                    pieces
+                                </p>
+                                <button type="button" class="btn btn-primary
+                                    add_cart">
+                                    ADD
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3 col-sm-12 col-md-6
+                        cart_Product">
+                        <div class="card">
+                            <img
+                                class="card-img-top h-25"
+                                src="../E-commerce Assignment/gulab1.png"
+                                alt="Card image cap"
+                                />
+                            <div class="card-body">
+                                <h5 class="card-title">Gulab Jamun</h5>
+                                <h5 class="card-text">₹180</h5>
+                                <p>Noodles stir fried in aromatic burnt garlic
+                                    spice</p>
+                                <a href="#" class="btn btn-primary add_cart">ADD</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3 col-sm-12 col-md-6
+                        cart_Product">
+                        <div class="card">
+                            <img
+                                class="card-img-top h-50"
+                                src="../E-commerce Assignment/paneer ratio.jpg"
+                                alt="Card image cap"
+                                />
+                            <div class="card-body">
+                                <h5 class="card-title">Fried Rice</h5>
+                                <h5 class="card-text">₹220</h5>
+                                <p>Served with tomato sauce(no artificial
+                                    colours).</p>
+                                <a href="#" class="btn btn-primary add_cart">ADD</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3 col-md-6 col-sm-12
+                        cart_Product">
+                        <div class="card">
+                            <img
+                                class="card-img-top h-50"
+                                src="../E-commerce Assignment/Dragon-paneer.jpg"
+                                alt="Card image cap"
+                                />
+                            <div class="card-body">
+                                <h5 class="card-title">Paneer Gravey</h5>
+                                <h5 class="card-text">₹200</h5>
+                                <p>A paneer dish cooked in a onion tomato gravy.</p>
+                                <a href="#" class="btn btn-primary add_cart">ADD</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="toast-container position-absolute end-0 bottom-0
-            p-5">
-           <div id="liveToast" class="toast"
-               role="alert" aria-live="assertive"
-               aria-atomic="true">
-               <div class="toast-header d-flex">
 
-                   <strong class="me-auto">Item added
-                       to cart</strong>
-                       <a href="product.html">
-                        <button class="rounded-1 btn btn-primary" onclick="viewCart(this)" targrt="_blank">View Cart</button>
+            <div class="container">
+                <div class="row my-5">
+                    <div class="col-12 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <img
+                                class="card-img-top h-50"
+                                src="../E-commerce Assignment/fish (2).jpg"
+                                alt="Card image cap"
+                                />
+                            <div class="card-body">
+                                <h5 class="card-title">Combo</h5>
+                                <h5 class="card-text">₹500</h5>
+                                <p>Fish & chicken briyani with boneless pieces</p>
+                                <a href="#" class="btn btn-primary add_cart">ADD</a>
+                            </div>
+                        </div>
+                    </div>
 
-                       </a>
+                    <div class="col-12 col-lg-3 col-sm-12 col-md-6">
+                        <div class="card">
+                            <img
+                                class="card-img-top h-25"
+                                src="../E-commerce Assignment/parota ratio.jpg"
+                                alt="Card image cap"
+                                />
+                            <div class="card-body">
+                                <h5 class="card-title">Parota</h5>
+                                <h5 class="card-text">₹100</h5>
+                                <p>Noodles stir fried in aromatic burnt garlic
+                                    spice</p>
+                                <a href="#" class="btn btn-primary add_cart">ADD</a>
+                            </div>
+                        </div>
+                    </div>
 
-               </div>
-           </div>
-       </div>
+                    <div class="col-12 col-lg-3 col-sm-12 col-md-6">
+                        <div class="card">
+                            <img
+                                class="card-img-top h-50"
+                                src="../E-commerce Assignment/pizza ratio.jpg"
+                                alt="Card image cap"
+                                />
+                            <div class="card-body">
+                                <h5 class="card-title">Pizza</h5>
+                                <h5 class="card-text">₹450</h5>
+                                <p>Served with tomato sauce(no artificial
+                                    colours).</p>
+                                <a href="#" class="btn btn-primary add_cart">ADD</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <img
+                                class="card-img-top h-50"
+                                src="../E-commerce Assignment/pongal ratio.jpg"
+                                alt="Card image cap"
+                                />
+                            <div class="card-body">
+                                <h5 class="card-title">Pongal</h5>
+                                <h5 class="card-text">₹120</h5>
+                                <p>All time craving South Indian pongal.</p>
+                                <a href="#" class="btn btn-primary add_cart">ADD</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
         <div class="text-bg-dark">
-            <div class="container pt-5 ">
+            <div class="container pt-5">
                 <div class="row">
                     <div class="col-12 col-lg-3 col-md-6 col-sm-12 mx-auto">
                         <div>
@@ -309,8 +339,8 @@
                             <li>About Us</li>
                             <li>Team</li>
                             <li>Career</li>
-                            <li>Swiggy Blog</li>
-                            <li>Swiggy Corporate</li>
+                            <li>Foody Blog</li>
+                            <li>Foody Corporate</li>
                         </ul>
                     </div>
                     <div class="col-12 col-lg-3 col-md-6 col-sm-12">
@@ -319,28 +349,21 @@
                             <li>Help & Support</li>
                             <li>Partner with us</li>
                         </ul>
-                       
                     </div>
                     <div class="col-12 col-lg-3 col-md-6 col-sm-12">
                         <h5>Legal</h5>
                         <ul class="list-group">
-                           <li>Terms & Conditions</li>
-                           <li>Privacy Policy</li>
-                           <li>Offer Terms</li>
-                           <li>Cookie Policy</li>
+                            <li>Terms & Conditions</li>
+                            <li>Privacy Policy</li>
+                            <li>Offer Terms</li>
+                            <li>Cookie Policy</li>
                         </ul>
-                        
                     </div>
-
-                    <!-- <div class="col-12 col-lg-3 col-md-6 col-sm-12">
-                        <img class="h-25" src="../E-commerce Assignment/app store ratio.png" alt="no image">
-                        
-                    </div>  -->
                 </div>
 
                 <div class="row mt-5">
                     <div class="col-12">
-                        <div class="d-flex justify-content-center ">
+                        <div class="d-flex justify-content-center">
                             <h2>Follow Us</h2>
                         </div>
                     </div>
@@ -360,24 +383,17 @@
                     </div>
                 </div>
             </div>
-
-
-
         </div>
 
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
             integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-            crossorigin="anonymous">
-        </script>
+            crossorigin="anonymous"></script>
 
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
             integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-            crossorigin="anonymous">
-        </script>
+            crossorigin="anonymous"></script>
         <script src="index.js"></script>
-        <script src="dummy.js"></script>
     </body>
-
 </html>

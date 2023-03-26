@@ -21,3 +21,10 @@ ul {
     background-image: url("../E-commerce\ Assignment/baneer.jpg");
     color: orange;
 }
+.cart_img {
+    height: 70px;
+    width: auto;
+}
+.mainbg{
+    background-image: url('../E-commerce\ Assignment/dishes');
+}
