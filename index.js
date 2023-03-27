@@ -1,3 +1,21 @@
+// function addCounting(item){
+//     count= count + 1  ;
+//     document.getElementById("counting").innerText= count ;
+//     localStorage.setItem("addCount$",item );
+
+// }
+
+// var count=0;
+// document.getElementById("counting").innerText= count;
+
+// function Increment (){
+//     count=count + 1;
+//     document.getElementById("counting").innerText=count;
+// }
+// function decrement (){
+//     count=count -1;
+//     document.getElementById("counting").innerText=count;
+// }
 const products = [
   {
     image: "../E-commerce Assignment/briyani ratio.jpg",
@@ -50,7 +68,19 @@ const products = [
 ];
 
 const addCart = document.querySelectorAll(".add_cart");
-const cart = document.querySelector(".cart span");
+const cart = document.querySelector(".cartbag"); 
+const incrementBtn = document.querySelectorAll(".increment_btn");
+const decrementBtn = document.querySelectorAll(".decrement_btn");
+const count= document.querySelector('.counting')
+console.log(count.value)
+
+
+for(let i=0; i< incrementBtn.length; i++){
+    incrementBtn[i].addEventListener("click", () => {
+       count.value++;
+       
+    })
+}
 
 for (let i = 0; i < addCart.length; i++) {
   addCart[i].addEventListener("click", () => {
@@ -128,7 +158,7 @@ function displayCart() {
 
   if (cartItems && productContainer) {
     productContainer.innerHTML = "";
-    Object.values(cartItems).map((item, index) => {
+    Object.values(cartItems).map((item) => {
       const productContainerInnerHtml = `<tr>
              <td class="align-middle">
               <img
@@ -155,6 +185,7 @@ function displayCart() {
 }
 
 const placeOrderButton = document.querySelector(".place_order");
+
 placeOrderButton.addEventListener("click", () => {
   alert("Your order has been confirmed.");
 });

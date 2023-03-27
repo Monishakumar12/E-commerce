@@ -73,15 +73,16 @@
                                 </h6>
                             </a>
                         </div>
-                        <div class="mx-5 my-1 text-white cart">
+                        <div class="mx-5 my-1 text-white cart" >
                             <a
                                 href="cart.html"
                                 class="bg-gradient border pb-2 pt-1 px-3
                                 rounded-1 text-white text-decoration-none
-                                addingCart"
+                                addingCart "
                                 target="_blank">
-                                <i class="bi bi-bag-check"><span>0</span></i>
+                                <i class="bi bi-bag-check"><span class="cartbag">0</span></i>
                             </a>
+                           
                         </div>
                         <button
                             type="button"
@@ -195,10 +196,23 @@
                                     Biryani Rice with chicken sholay Boneless
                                     pieces
                                 </p>
-                                <button type="button" class="btn btn-primary
-                                    add_cart">
-                                    ADD
-                                </button>
+                              
+                                <div class="d-flex">
+                                    
+                                        <a href="#" class="btn btn-primary add_cart">ADD</a>
+
+                                    
+                                   
+                                    <div class="d-flex mx-1" id="add">
+                                        <button type="button" class="increment_btn">+</button>
+                                        
+                                          <input type="number"
+                                            class="form-control counting" value="1" aria-describedby="helpId" placeholder="">
+                                        
+                                        <button type="button" class="decrement_btn" >-</button>
+                                    </div>
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -216,7 +230,22 @@
                                 <h5 class="card-text">₹180</h5>
                                 <p>Noodles stir fried in aromatic burnt garlic
                                     spice</p>
-                                <a href="#" class="btn btn-primary add_cart">ADD</a>
+                                    <div class="d-flex">
+                                    
+                                        <a href="#" class="btn btn-primary add_cart">ADD</a>
+
+                                    
+                                   
+                                        <div class="d-flex mx-1" id="add">
+                                            <button type="button" class="increment_btn">+</button>
+                                            
+                                              <input type="number"
+                                                class="form-control counting" value="1" aria-describedby="helpId" placeholder="">
+                                            
+                                            <button type="button" class="decrement_btn" >-</button>
+                                        </div>
+                                    
+                                </div>                            
                             </div>
                         </div>
                     </div>
