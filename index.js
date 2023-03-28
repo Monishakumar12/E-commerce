@@ -1,66 +1,57 @@
-// function addCounting(item){
-//     count= count + 1  ;
-//     document.getElementById("counting").innerText= count ;
-//     localStorage.setItem("addCount$",item );
 
-// }
-
-// var count=0;
-// document.getElementById("counting").innerText= count;
-
-// function Increment (){
-//     count=count + 1;
-//     document.getElementById("counting").innerText=count;
-// }
-// function decrement (){
-//     count=count -1;
-//     document.getElementById("counting").innerText=count;
-// }
 const products = [
   {
-    image: "../E-commerce Assignment/briyani ratio.jpg",
+    id:"food_0",
+    image: "../E-commerce Assignment/Images/briyani ratio.jpg",
     title: "Chicken Briyani",
     price: 250,
     inCart: 0,
   },
   {
-    image: "../E-commerce Assignment/gulab1.png",
+    id:"food_1",
+    image: "../E-commerce Assignment/Images/gulab1.png",
     title: "Gulab Jamun",
-    price: 180,
+    price: 80,
     inCart: 0,
   },
   {
-    image: "../E-commerce Assignment/paneer ratio.jpg",
+    id:"food_2",
+    image: "../E-commerce Assignment/Images/paneer ratio.jpg",
     title: "Fried Rice",
     price: 220,
     inCart: 0,
   },
   {
-    image: "../E-commerce Assignment/Dragon-paneer.jpg",
+    id:"food_3",
+    image: "../E-commerce Assignment/Images/Dragon-paneer.jpg",
     title: "Paneer Gravey",
     price: 200,
     inCart: 0,
   },
   {
-    image: "../E-commerce Assignment/fish (2).jpg",
+    id:"food_4",
+    image: "../E-commerce Assignment/Images/fish (2).jpg",
     title: "Combo",
     price: 500,
     inCart: 0,
   },
   {
-    image: "../E-commerce Assignment/parota ratio.jpg",
+    id:"food_5",
+    image: "../E-commerce Assignment/Images/parota ratio.jpg",
     title: "Parota",
     price: 100,
     inCart: 0,
   },
   {
-    image: "../E-commerce Assignment/pizza ratio.jpg",
+    id:"food_6",
+    image: "../E-commerce Assignment/Images/pizza ratio.jpg",
     title: "Pizza",
     price: 450,
     inCart: 0,
   },
   {
-    image: "../E-commerce Assignment/pongal ratio.jpg",
+    id:"food_7",
+    image: "../E-commerce Assignment/Images/pongal ratio.jpg",
     title: "Pongal",
     price: 120,
     inCart: 0,
@@ -69,23 +60,11 @@ const products = [
 
 const addCart = document.querySelectorAll(".add_cart");
 const cart = document.querySelector(".cartbag"); 
-const incrementBtn = document.querySelectorAll(".increment_btn");
-const decrementBtn = document.querySelectorAll(".decrement_btn");
-const count= document.querySelector('.counting')
-console.log(count.value)
-
-
-for(let i=0; i< incrementBtn.length; i++){
-    incrementBtn[i].addEventListener("click", () => {
-       count.value++;
-       
-    })
-}
 
 for (let i = 0; i < addCart.length; i++) {
   addCart[i].addEventListener("click", () => {
     cartNumbers(products[i]);
-    totalCost(products[i]);
+    totalCost(products[i])
   });
 }
 
@@ -123,7 +102,6 @@ function setItems(product) {
         [product.title]: product,
       };
     }
-
     cartItems[product.title].inCart += 1;
   } else {
     product.inCart = 1;
@@ -158,7 +136,8 @@ function displayCart() {
 
   if (cartItems && productContainer) {
     productContainer.innerHTML = "";
-    Object.values(cartItems).map((item) => {
+    totalCostContainer.innerHTML = "";
+    Object.values(cartItems).map((item, id) => {
       const productContainerInnerHtml = `<tr>
              <td class="align-middle">
               <img
@@ -168,27 +147,121 @@ function displayCart() {
              </td>
              <td class="align-middle">${item.title}</td>
              <td class="align-middle">₹${item.price}</td>
-             <td class="align-middle">${item.inCart}</td>
+             <td class="align-middle ">
+             <div class="d-flex ">
+                <h5 class="px-2">
+                  <i class="bi bi-plus-square" onclick="increment(${id})"></i>
+                </h5>
+                ${item.inCart} 
+                <h5 class="px-2">
+                  <i class="bi bi-dash-square" onclick="decrement(${id})"></i>
+                </h5>
+             </div>
+             </td>
              <td class="align-middle">₹${item.inCart * item.price}</td>
+             <td class="align-middle">
+              <div>
+                <i class="bi bi-trash" onclick="deleteItem(${id})"></i>
+              </div>
+             </td>
         </tr>`;
 
         productContainer.innerHTML += productContainerInnerHtml;
 
     });
 
-    totalCostContainer.innerHTML += `
+    const totalCostContainerInnerHTML = `
         <div class="row total_cost">
             <h5 class="card-title">Total Amount : ₹ ${cartCost}</h5>
         </div>
         `;
+
+    totalCostContainer.innerHTML += totalCostContainerInnerHTML
   }
 }
+ 
+let increment = (id) => {
+  let cartItems = localStorage.getItem("productsInCart");
+  cartItems = JSON.parse(cartItems);
+  let item = Object.values(cartItems)[id]
 
-const placeOrderButton = document.querySelector(".place_order");
+  if (cartItems != null) {
+      cartItems[item.title].inCart += 1;
+      if (cartItems[item.title].inCart <= 0) {
+        cartItems[item.title].inCart = 0;
+      }
+  } 
+  
+  localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+  refreshTotalCost();
+};
 
-placeOrderButton.addEventListener("click", () => {
-  alert("Your order has been confirmed.");
-});
+let decrement = (id) => {
+  let cartItems = localStorage.getItem("productsInCart");
+  cartItems = JSON.parse(cartItems);
+  let item = Object.values(cartItems)[id]
 
+  console.log("cartItems", cartItems)
+  console.log("cartItem", item)
+
+  if (cartItems != null) {
+      cartItems[item.title].inCart -= 1;
+      if (cartItems[item.title].inCart <= 0) {
+        cartItems[item.title].inCart = 0;
+      }
+  } 
+  
+  localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+  refreshTotalCost();
+};
+
+let deleteItem = (id) => {
+
+  if (confirm("Are you sure! want to delete?") == true) {
+
+    let cartItems = localStorage.getItem("productsInCart");
+    cartItems = JSON.parse(cartItems);
+
+    const arrayOfProducts = Object.values(cartItems)
+
+    if (cartItems != null) {
+      removeById(arrayOfProducts, Object.values(cartItems)[id])
+    } 
+
+    let nCartItems = JSON.stringify(arrayOfProducts);
+    localStorage.setItem("productsInCart", JSON.stringify(JSON.parse(nCartItems)));
+
+    refreshTotalCost();
+  }
+};
+
+const removeById = (arrayOfProducts, deleteProduct) => {
+  const requiredIndex = arrayOfProducts.findIndex(item => {
+     return item.title === deleteProduct.title;
+  });
+  if(requiredIndex === -1){
+     return false;
+  };
+  return !!arrayOfProducts.splice(requiredIndex, 1);
+};
+
+function refreshTotalCost() {
+  let cartItems = localStorage.getItem("productsInCart");
+  cartItems = JSON.parse(cartItems);
+
+  var totalCost = 0
+  var totalCart = 0
+
+  for (let i = 0; i < Object.values(cartItems).length; i++) {
+    totalCart += Object.values(cartItems)[i].inCart
+    totalCost += Object.values(cartItems)[i].inCart * Object.values(cartItems)[i].price
+  }
+
+  localStorage.setItem("totalCost", totalCost);
+  localStorage.setItem("cartNumbers", totalCart);
+
+  onLoadingCart();
+  displayCart();
+}
 onLoadingCart();
 displayCart();
