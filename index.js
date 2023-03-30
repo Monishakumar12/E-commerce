@@ -79,8 +79,6 @@ function cartNumbers(product) {
   var productNumbers = localStorage.getItem("cartNumbers");
   productNumbers = parseInt(productNumbers);
 
-  localStorage.setItem("cartNumbers", 1);
-
   if (productNumbers) {
     localStorage.setItem("cartNumbers", productNumbers + 1);
     cart.textContent = productNumbers + 1;
@@ -183,13 +181,10 @@ function displayCart() {
 let increment = (id) => {
   let cartItems = localStorage.getItem("productsInCart");
   cartItems = JSON.parse(cartItems);
-  let item = Object.values(cartItems)[id]
+  let incrementItem = Object.values(cartItems)[id]
 
   if (cartItems != null) {
-      cartItems[item.title].inCart += 1;
-      if (cartItems[item.title].inCart <= 0) {
-        cartItems[item.title].inCart = 0;
-      }
+      cartItems[incrementItem.title].inCart += 1;
   } 
   
   localStorage.setItem("productsInCart", JSON.stringify(cartItems));
@@ -199,15 +194,12 @@ let increment = (id) => {
 let decrement = (id) => {
   let cartItems = localStorage.getItem("productsInCart");
   cartItems = JSON.parse(cartItems);
-  let item = Object.values(cartItems)[id]
-
-  console.log("cartItems", cartItems)
-  console.log("cartItem", item)
+  let decrementItem = Object.values(cartItems)[id]
 
   if (cartItems != null) {
-      cartItems[item.title].inCart -= 1;
-      if (cartItems[item.title].inCart <= 0) {
-        cartItems[item.title].inCart = 0;
+      cartItems[decrementItem.title].inCart -= 1;
+      if (cartItems[decrementItem.title].inCart < 0) {
+        cartItems[decrementItem.title].inCart = 0;
       }
   } 
   
@@ -217,44 +209,35 @@ let decrement = (id) => {
 
 let deleteItem = (id) => {
 
-  if (confirm("Are you sure! want to delete?") == true) {
+  if (confirm("Are you sure! you want to delete?") == true) {
 
     let cartItems = localStorage.getItem("productsInCart");
     cartItems = JSON.parse(cartItems);
 
-    const arrayOfProducts = Object.values(cartItems)
+    let arrayOfProducts = Object.values(cartItems)
 
     if (cartItems != null) {
-      removeById(arrayOfProducts, Object.values(cartItems)[id])
+      arrayOfProducts.splice(id, 1)
     } 
 
-    let nCartItems = JSON.stringify(arrayOfProducts);
-    localStorage.setItem("productsInCart", JSON.stringify(JSON.parse(nCartItems)));
-
+    localStorage.setItem("productsInCart", JSON.stringify(arrayOfProducts));
     refreshTotalCost();
   }
 };
 
-const removeById = (arrayOfProducts, deleteProduct) => {
-  const requiredIndex = arrayOfProducts.findIndex(item => {
-     return item.title === deleteProduct.title;
-  });
-  if(requiredIndex === -1){
-     return false;
-  };
-  return !!arrayOfProducts.splice(requiredIndex, 1);
-};
 
 function refreshTotalCost() {
   let cartItems = localStorage.getItem("productsInCart");
   cartItems = JSON.parse(cartItems);
 
+  let arrayOfItems = Object.values(cartItems)
+
   var totalCost = 0
   var totalCart = 0
 
-  for (let i = 0; i < Object.values(cartItems).length; i++) {
-    totalCart += Object.values(cartItems)[i].inCart
-    totalCost += Object.values(cartItems)[i].inCart * Object.values(cartItems)[i].price
+  for (let i = 0; i < arrayOfItems.length; i++) {
+    totalCart += arrayOfItems[i].inCart
+    totalCost += arrayOfItems[i].inCart * arrayOfItems[i].price
   }
 
   localStorage.setItem("totalCost", totalCost);
