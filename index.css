@@ -18,7 +18,7 @@ ul {
 .welcome{
     border: 2px solid orange;
     padding: 2rem 0;
-    background-image: url("../E-commerce-main/Images/baneer.jpg");
+    background-image: url("https://res.cloudinary.com/dws9uqekq/image/upload/v1680586656/E-commerce-foody/baneer_exruuu.jpg");
     color: orange;
 }
 .cart_img {
